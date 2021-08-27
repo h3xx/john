@@ -63,20 +63,6 @@ John ignore these (assume that shell is called
 .P
 john \-show \-shells:\-/etc/expired passwd
 .P
-You might want to mail all the users who got weak passwords,
-to tell them to change the passwords. It's not always a good idea though
-(unfortunately, lots of people seem to ignore such mail, it can be used
-as a hint for crackers, etc), but anyway, I'll assume you know what you're
-doing. Get a copy of the 'mailer' script supplied with John, so you won't
-change anything that's under
-.I /usr/sbin
-; edit the message it sends, and
-possibly the mail command inside it (especially if the password file is
-from a different box than you got John running on).
-Then run:
-.P
- ./mailer passwd
-.P
 Anyway, you probably should have a look at
 .I /usr/share/doc/john/OPTIONS
 for a list of all the command line options, and at
@@ -218,7 +204,6 @@ is used to configure how john will send messages to users that had their passwor
 cracked.
 .P
 .SH SEE ALSO
-.BR mailer (1),
 .BR unafs (1),
 .BR unique (1),
 .BR unshadow (1),
